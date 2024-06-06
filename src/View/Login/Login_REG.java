@@ -69,7 +69,7 @@ public class Login_REG {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		LOG_Splash obj=new LOG_Splash();
+		LOG_Splash obj = new LOG_Splash();
 		
 		
  
