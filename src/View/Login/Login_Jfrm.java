@@ -23,16 +23,10 @@ public class Login_Jfrm extends JFrame {
     private JComboBox rol;
     private JToggleButton tglbtnNewToggleButton;
 
-    /**
-     * Create the application.
-     */
     public Login_Jfrm() {
         initialize();
     }
 
-    /**
-     * Launch the application.
-     */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
