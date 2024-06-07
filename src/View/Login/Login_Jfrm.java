@@ -124,7 +124,7 @@ public class Login_Jfrm extends JFrame {
         tglbtnNewToggleButton.setBounds(341, 113, 18, 14);
         frmLoginPanel.getContentPane().add(tglbtnNewToggleButton);
 
-        JLabel lblNotRegisterYet = new JLabel("Not Register Yet ? ");
+        JLabel lblNotRegisterYet = new JLabel("Apakah sudah punya ? ");
         lblNotRegisterYet.setFont(new Font("Tahoma", Font.PLAIN, 9));
         lblNotRegisterYet.setBounds(124, 236, 94, 14);
         frmLoginPanel.getContentPane().add(lblNotRegisterYet);
