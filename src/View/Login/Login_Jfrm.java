@@ -10,10 +10,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-//import com.seaglasslookandfeel.SeaGlassLookAndFeel;
-//import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
-//import napkin.NapkinLookAndFeel;
-
 public class Login_Jfrm extends JFrame {
 
     public static JFrame frmLoginPanel;
@@ -98,7 +94,9 @@ public class Login_Jfrm extends JFrame {
 
         rol = new JComboBox();
         rol.setModel(
-                new DefaultComboBoxModel(new String[] { "Select", "Employee", "Manager", "Admin", "Super_Admin" }));
+                // new DefaultComboBoxModel(new String[] { "Select", "Employee", "Manager",
+                // "Admin", "Super_Admin" }));
+                new DefaultComboBoxModel(new String[] { "Pilih", "User", "Customer", "Admin" }));
         rol.setBounds(124, 145, 89, 20);
         frmLoginPanel.getContentPane().add(rol);
 
