@@ -10,10 +10,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-//import com.seaglasslookandfeel.SeaGlassLookAndFeel;
-//import de.javasoft.plaf.synthetica.SyntheticaAluOxideLookAndFeel;
-//import napkin.NapkinLookAndFeel;
-
 public class Login_Jfrm extends JFrame {
 
     public static JFrame frmLoginPanel;
@@ -23,23 +19,17 @@ public class Login_Jfrm extends JFrame {
     private JComboBox rol;
     private JToggleButton tglbtnNewToggleButton;
 
-    /**
-     * Create the application.
-     */
     public Login_Jfrm() {
         initialize();
     }
 
-    /**
-     * Launch the application.
-     */
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    //UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
+                    // UIManager.setLookAndFeel(new SyntheticaBlackEyeLookAndFeel());
                     UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
-                    //UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
+                    // UIManager.setLookAndFeel(new SyntheticaAluOxideLookAndFeel());
                     window = new Login_Jfrm();
                     window.frmLoginPanel.setVisible(true);
                 } catch (Exception e) {
@@ -53,7 +43,6 @@ public class Login_Jfrm extends JFrame {
      * Initialize the contents of the frame.
      */
     private void initialize() {
-
 
         frmLoginPanel = new JFrame();
         frmLoginPanel.setType(Type.POPUP);
@@ -81,7 +70,6 @@ public class Login_Jfrm extends JFrame {
 
         passw = new JPasswordField();
 
-
         passw.setColumns(10);
         passw.setBounds(124, 110, 207, 20);
         frmLoginPanel.getContentPane().add(passw);
@@ -90,13 +78,12 @@ public class Login_Jfrm extends JFrame {
         btnLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 if (rol.getSelectedItem().toString().equals("Select")) {
-                    JOptionPane.showMessageDialog(null, "Select Your Role");
+                    JOptionPane.showMessageDialog(null, "Pilih sebagai?");
                 } else {
                     String un = user.getText();
                     String ps = passw.getText();
                     String role = rol.getSelectedItem().toString();
                     new Login_cntrl(un, ps, role);
-
 
                 }
 
@@ -106,7 +93,10 @@ public class Login_Jfrm extends JFrame {
         frmLoginPanel.getContentPane().add(btnLogin);
 
         rol = new JComboBox();
-        rol.setModel(new DefaultComboBoxModel(new String[]{"Select", "Employee", "Manager", "Admin", "Super_Admin"}));
+        rol.setModel(
+                // new DefaultComboBoxModel(new String[] { "Select", "Employee", "Manager",
+                // "Admin", "Super_Admin" }));
+                new DefaultComboBoxModel(new String[] { "Pilih", "User", "Customer", "Admin" }));
         rol.setBounds(124, 145, 89, 20);
         frmLoginPanel.getContentPane().add(rol);
 
@@ -116,9 +106,11 @@ public class Login_Jfrm extends JFrame {
 
         tglbtnNewToggleButton = new JToggleButton("");
         tglbtnNewToggleButton.setIcon(new ImageIcon(Login_Jfrm.class.getResource("/resource/eye.png")));
+
         tglbtnNewToggleButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 if (tglbtnNewToggleButton.isSelected()) {
+                    System.out.println("isi dengan benar!");
                     ((JPasswordField) passw).setEchoChar((char) 0);
                 } else {
                     ((JPasswordField) passw).setEchoChar('*');
@@ -126,10 +118,11 @@ public class Login_Jfrm extends JFrame {
 
             }
         });
+
         tglbtnNewToggleButton.setBounds(341, 113, 18, 14);
         frmLoginPanel.getContentPane().add(tglbtnNewToggleButton);
 
-        JLabel lblNotRegisterYet = new JLabel("Not Register Yet ? ");
+        JLabel lblNotRegisterYet = new JLabel("Apakah sudah punya ? ");
         lblNotRegisterYet.setFont(new Font("Tahoma", Font.PLAIN, 9));
         lblNotRegisterYet.setBounds(124, 236, 94, 14);
         frmLoginPanel.getContentPane().add(lblNotRegisterYet);
@@ -159,6 +152,8 @@ public class Login_Jfrm extends JFrame {
         lblRegisterHere.setBounds(211, 236, 82, 14);
         frmLoginPanel.getContentPane().add(lblRegisterHere);
 
-
     }
 }
+
+
+//polisi melakukan perubahan  :)
